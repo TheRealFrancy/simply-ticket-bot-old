@@ -24,7 +24,7 @@ const ticket = require('./commands/ticket');
 
 
 client.on('guildCreate', async guild => {
-  const db = await MongoClient.connect('mongodb+srv://therealfrancydev:Andefran2001@francymaincluster.opxrg.mongodb.net/simply-ticket?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+  const db = await MongoClient.connect('', { useNewUrlParser: true, useUnifiedTopology: true })
 
   const dbo = db.db('simply-ticket');
 
@@ -41,7 +41,7 @@ client.on('guildCreate', async guild => {
 })
 
 client.on('guildDelete', async guild => {
-  const db = await MongoClient.connect('mongodb+srv://therealfrancydev:Andefran2001@francymaincluster.opxrg.mongodb.net/simply-ticket?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+  const db = await MongoClient.connect('', { useNewUrlParser: true, useUnifiedTopology: true })
 
   const dbo = db.db('simply-ticket');
 
@@ -61,7 +61,7 @@ client.on('ready', async () => {
 
 
 
-  const db = await MongoClient.connect('mongodb+srv://therealfrancydev:Andefran2001@francymaincluster.opxrg.mongodb.net/simply-ticket?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+  const db = await MongoClient.connect('', { useNewUrlParser: true, useUnifiedTopology: true })
   const dbo = db.db('simply-ticket');
   console.log(`bot online `);
 
